@@ -26,6 +26,10 @@ with open('indexmy1.html', 'r', encoding='utf-8') as f:
 with open('indexmy2.html', 'r', encoding='utf-8') as f:
     html2 = f.read()
 
+with open('indexmy2.html', 'r', encoding='utf-8') as f:
+    html3 = f.read()
+
+
 
 # ✅ 이미지 경로를 base64로 치환
 html1 = html1.replace('src="flowchart.png"', f'src="{flowchart_base64}"')
@@ -42,10 +46,13 @@ with col1:
         st.video(url)
 
     with st.expander('Content #2...'):
-        htmlviewer.html(html1, height=2400)
+        htmlviewer.html(html1, height=3000)
 
     with st.expander('Content #3...'):
-        htmlviewer.html(html2, height=2400)
+        htmlviewer.html(html2, height=3000)
+
+    with st.expander('Content #4...'):
+        htmlviewer.html(html3, height=3000)
 
 with col2:
     with st.expander('Tips..'):
@@ -54,6 +61,6 @@ with col2:
 # ✅ 하단 저작권 표시
 st.markdown('<hr>', unsafe_allow_html=True)
 st.write(
-    '<font color="BLUE">(c)copyright. all rights reserved by skykang</font>',
+    '<font color="BLUE">(c)copyright. all rights reserved by hcyang</font>',
     unsafe_allow_html=True
 )
